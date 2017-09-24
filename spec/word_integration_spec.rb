@@ -3,24 +3,21 @@ require 'capybara/rspec'
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('Word list Page', {:type => :feature}) do
-  it("saves new word and shows word on screen") do
+describe('Word Page', {:type => :feature}) do
+  it("shows form to add new word") do
     visit('/')
-    fill_in('word', :with => "alligator")
-    click_button("Add word!")
-    expect(page).to have_content("alligator")
+    click_link("Add new word")
+    expect(page).to have_content("Add word and definition:")
   end
+end
 
-  it('routes to random word definition page when random word button is clicked') do
-    visit('/')
-    fill_in('word', :with => "window")
-    click_button("Add word!")
-    fill_in('word', :with => "door")
-    click_button("Add word!")
-    fill_in('word', :with => "elephant")
-    click_button("Add word!")
-    click_link("Random Word!")
-    expect(page).to have_content("Add definition:")
+describe('Form Page', {:type => :feature}) do
+  it("add a new word and display in list") do
+    visit('/new')
+    fill_in('word', :with => "hi")
+    fill_in('definition1', :with => "a greeting")
+    click_button("Submit")
+    expect(page).to have_content("hi")
   end
 end
 
@@ -31,24 +28,5 @@ describe('Definitions page', {:type => :feature}) do
     click_button("Add word!")
     click_link('villain')
     expect(page).to have_content("villain")
-  end
-
-  it("allows user to enter definition and displays it") do
-    visit('/')
-    click_link('villain')
-    fill_in('definition', :with => "a character whose evil actions or motives are important to the plot")
-    click_button("Add definition!")
-    expect(page).to have_content("character")
-  end
-
-  it("allows user to enter more than one definition") do
-    visit('/')
-    click_link('villain')
-    fill_in('definition', :with => "a bad guy")
-    click_button("Add definition!")
-    fill_in('definition', :with => "the opposite of a hero")
-    click_button("Add definition!")
-    expect(page).to have_content("bad")
-    expect(page).to have_content("opposite")
   end
 end

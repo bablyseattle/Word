@@ -1,7 +1,7 @@
 <h2> Click on words to see definitions</h2>
 <ul>
 <% @words.each do | word| %>
-<li><a href ="/:word"><%= word.word %></a></li>
+<li><a href ="/<%= word.word %>"><%= word.word %></a></li>
 	
 <% end %>
 </ul>

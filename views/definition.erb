@@ -1,2 +1,8 @@
 <h1>Word:<%= @word.word%></h1>
-<h3>Definition:<%= @word.definition%></h3>
+<h3>Definition1:  <%= (@word.definition)[0]%></h3>
+<% if(!(@word.definition)[1].empty?) %>
+<h3>Definition2: <%= (@word.definition)[1]%></h3>
+<% end %>
+<% if(!(@word.definition)[2].empty?) %>
+<h3>Definition3: <%= (@word.definition)[2]%></h3>
+<% end %>

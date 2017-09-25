@@ -10,7 +10,7 @@ _This application allows studends to view  words and learn about their definitio
 
 ## Setup/Installation Requirements
 
-* _Clone program from https://github.com/lucky500/words.git_
+* _Clone program from https://github.com/bablyseattle/Word_
 * _Open in terminal_
 *_Run ruby app.rb in project directory
 * _Open http://localhost:4567/ in preferred browser._

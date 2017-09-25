@@ -2,7 +2,7 @@
 
 #### _Epicodus project week 2 in Ruby_
 
-#### By _**Bably Kumari_
+#### By _Bably Kumari_
 
 ## Description
 

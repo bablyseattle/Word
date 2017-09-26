@@ -14,6 +14,7 @@ _This application allows studends to view  words and learn about their definitio
 * _Open in terminal_
 *_Run ruby app.rb in project directory
 * _Open http://localhost:4567/ in preferred browser._
+*_Alternatively you can open  https://fast-retreat-23016.herokuapp.com/ in your browser._ 
 
 ## Specs
 

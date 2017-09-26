@@ -13,8 +13,8 @@ _This application allows studends to view  words and learn about their definitio
 * _Clone program from https://github.com/bablyseattle/Word_
 * _Open in terminal_
 *_Run ruby app.rb in project directory
-* _Open http://localhost:4567/ in preferred browser._
-*_Alternatively you can open  https://fast-retreat-23016.herokuapp.com/ in your browser._ 
+* _Open http://localhost:4567/ in preferred browser.
+* Alternatively you can open  https://fast-retreat-23016.herokuapp.com/ in your browser._ 
 
 ## Specs
 
